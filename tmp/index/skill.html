@@ -1,0 +1,175 @@
+{% extends 'index/model.htm' %}
+	
+{% block page %}
+		<div id="page">
+			<div id="content">
+							
+				<h1>Portfolio / Two Columns</h1>
+				
+				<div class="hr"></div>
+				
+				<!-- PORTFOLIO CATEGORIES -->
+				<ul class="pf_categories">
+					<li><strong>Show:&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+					<li class="active"><a href="#" class="all">All</a></li>
+					<li><a href="#" class="flash">Flash</a></li>
+					<li><a href="#" class="photos">Photos</a></li>
+					<li><a href="#" class="video">Video</a></li>
+					<li><a href="#" class="website">Website</a></li>
+				</ul>
+			
+				<!-- PORTFOLIO ITEMS -->
+				<ul class="portfolio-2c">
+					<li data-id="id-1" data-type="photos">
+						<!-- ITEM THUMB -->
+						<div class="thumb">
+							<a href="/static/index/images/pfolio-1-2c-tn.jpg" class="fancybox">	
+							<span class="imghover_2c_pfolio"></span>
+							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
+							</a>			
+						</div>						
+						<!-- ITEM TITLE -->
+						<h1>Picture cras vel enim sem in vulputate</h1>
+						<!-- ITEM DESCRIPTION -->
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel enim sem, in vulputate augue.</p>
+					</li>
+					
+					<li data-id="id-2" data-type="flash">
+						<div class="thumb">
+							<a href="http://s3.envato.com/files/1364715/preview.swf" class="fancybox">	
+							<span class="imghover_2c_pfolio"></span>
+							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
+							</a>			
+						</div>
+						<h1 class="main_h1">Flash pellentesque habitant morbi tristique</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor tincidunt.</p>
+					</li>
+					
+					<li data-id="id-3" data-type="video">
+						<div class="thumb">
+							<a href="#pfolio_embed_video_1" class="fancybox_embed">	
+							<span class="imghover_2c_pfolio"></span>
+							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" /></a>			
+						</div>
+						<h1 class="main_h1">Video pellentesque habitant morbi tristique vulputate</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor.</p>
+						<!-- HIDDEN CONTENT FOR EMBED -->
+						<div class="hidden">
+							<div id="pfolio_embed_video_1">
+								<iframe src="http://player.vimeo.com/video/2707661" width="400" height="302" frameborder="0"></iframe>
+							</div>
+						</div>
+					</li>
+					
+					<li data-id="id-4" data-type="photos video">
+						<div class="thumb">
+							<a href="http://homepage.mac.com/woostermike/Sites/videos/avatar.flv" class="fancybox_flv">	
+							<span class="imghover_2c_pfolio"></span>
+							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
+							</a>			
+						</div>
+						<h1 class="main_h1">FLV video pellentesque habitant morbi tristique</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor.</p>
+					</li>
+					
+					<li data-id="id-5" data-type="photos website">
+						<div class="thumb">
+							<a href="http://www.themeprince.com" target="_blank">	
+							<span class="imghover_2c_pfolio"></span>
+							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
+							</a>			
+						</div>
+						<h1 class="main_h1">Link cras vel enim sem in vulputate</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor tincidunt.</p>
+					</li>
+					
+					<li data-id="id-6" data-type="photos website">
+						<div class="thumb">
+							<a href="/static/index/images/pfolio-1-2c-tn.jpg" class="fancybox">	
+							<span class="imghover_2c_pfolio"></span>
+							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
+							</a>			
+						</div>
+						<h1 class="main_h1">Another picture pellentesque</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel enim sem, in vulputate augue.</p>
+					</li>
+				</ul><!-- .portfolio-2c ends -->					
+				
+				
+				<div class="hr"></div>
+			
+			
+				<!-- FOOTER -->
+				<div id="footer_widget_area">
+					<!-- FIRST FOOTER AREA / POPULAR POSTS -->
+					<div id="first">
+						<h3>Popular Posts</h3>	
+						
+						<ul class="posts_list">
+							<li>
+								<p class="posts_list_pic">
+									<a href="post.html"><img src="/static/index/images/post-tn1.jpg" alt="" /></a>
+								</p>
+								
+								<p class="posts_list_excerpt">
+									<a href="post.html"><strong>Praesent vitae velit convallis</strong></a>
+									<br />February 22, 2012
+								</p>
+							</li>
+								
+							<li>
+								<p class="posts_list_pic">
+									<a href="post.html"><img src="/static/index/images/post-tn1.jpg" alt="" /></a>
+								</p>
+								
+								<p class="posts_list_excerpt">
+									<a href="post.html"><strong>Lorem ipsum dolor sit amet</strong></a>
+									<br />January 28, 2012
+								</p>
+							</li>
+
+							<li>
+								<p class="posts_list_pic">
+									<a href="post.html"><img src="/static/index/images/post-tn1.jpg" alt="" /></a>
+								</p>
+								
+								<p class="posts_list_excerpt">
+									<a href="post.html"><strong>Mauris nec velit tortor quis </strong></a>
+									<br />March 14, 2012
+								</p>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- SECOND FOOTER AREA / ARCHIVES -->
+					<div id="second">
+						<h3>Archives</h3>		
+						
+						<ul class="archives">
+							<li><a href="#" title="March 2012">March 2012</a></li>
+							<li><a href="#" title="February 2012">February 2012</a></li>
+							<li><a href="#" title="January 2012">January 2012</a></li>
+							<li><a href="#" title="December 2011">December 2011</a></li>
+						</ul>					
+					</div>
+					
+					<!-- THIRD FOOTER AREA / CONTACT FORM -->
+					<div id="third">
+						<h3>Contact Form</h3>		
+					
+						<form action="" id="contact_form" method="post">
+						<ul class="contact_form">		
+							<li><input type="text" id="ub_w_cf1" name="ub_w_cf_name" /><label>Name</label></li>
+							<li><input type="text" id="ub_w_cf2" name="ub_w_cf_email" /><label>Email</label></li>
+							<li><textarea cols="" rows="" id="ub_w_cf3" name="ub_w_cf_msg" class="required"></textarea></li>
+							<li><input type="text" id="ub_w_cf4" name="ub_w_cf_captcha" class="required" maxlength="4" /><img src="captcha.php" id="captcha" alt="" /><label>Captcha</label></li>
+							<li id="ub_w_cf_sbtn"><input class="send_button" type="submit" value="OK" /></li>		
+						</ul>	
+						</form>	
+					</div>				
+				</div>
+				
+			
+			</div><!-- #content ends -->	
+		</div>
+{% endblock %}		
