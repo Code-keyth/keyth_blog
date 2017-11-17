@@ -10,12 +10,12 @@
 				
 				<!-- PORTFOLIO CATEGORIES -->
 				<ul class="pf_categories">
-					<li><strong>Show:&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+					<li><strong>分类列表:&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
 					<li class="active"><a href="#" class="all">All</a></li>
-					<li><a href="#" class="flash">Flash</a></li>
-					<li><a href="#" class="photos">Photos</a></li>
-					<li><a href="#" class="video">Video</a></li>
-					<li><a href="#" class="website">Website</a></li>
+					{% for item in skill_type %}
+					<li><a href="#" class="flash">{% item.name %}}</a></li>
+					{% endfor %}
+
 				</ul>
 			
 				<!-- PORTFOLIO ITEMS -->

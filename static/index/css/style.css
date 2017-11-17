@@ -485,7 +485,7 @@ object{
 .slider-nivo-holder{
 	float: left;
 	width: 590px;
-	height: 220px;
+	height: 320px;
 	background-image: url('../images/nivo-slider-bg.gif');
 	background-repeat: no-repeat;			
 	margin-bottom: 30px;
@@ -499,7 +499,7 @@ object{
 	position: relative;
 	float: left;
 	width: 582px;	
-	height: 212px;	
+	height: 312px;	
 	background-image: url('../images/loading.gif');
 	background-repeat: no-repeat;
 	background-position: center center;	
