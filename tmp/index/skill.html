@@ -11,91 +11,52 @@
 				<!-- PORTFOLIO CATEGORIES -->
 				<ul class="pf_categories">
 					<li><strong>分类列表:&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
-					<li class="active"><a href="#" class="all">All</a></li>
+					<li class="active"><a href="?" class="all">All</a></li>
+
 					{% for item in skill_type %}
-					<li><a href="#" class="flash">{% item.name %}}</a></li>
+					<li><a href="?type={{ item.id }}" class="flash">{{ item.name }}</a></li>
 					{% endfor %}
 
 				</ul>
 			
 				<!-- PORTFOLIO ITEMS -->
 				<ul class="portfolio-2c">
+
+					{% for item in skills %}
+
+
 					<li data-id="id-1" data-type="photos">
 						<!-- ITEM THUMB -->
 						<div class="thumb">
-							<a href="/static/index/images/pfolio-1-2c-tn.jpg" class="fancybox">	
+							<a href="/{{ item.thumbnail }}" class="fancybox">	
 							<span class="imghover_2c_pfolio"></span>
-							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
+							<img src="/{{ item.thumbnail }}" alt="" />
 							</a>			
 						</div>						
 						<!-- ITEM TITLE -->
-						<h1>Picture cras vel enim sem in vulputate</h1>
+						<a href="post/?id={{ item.id }}"><h1 style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;width:260px;">{{ item.title }}</h1></a>
 						<!-- ITEM DESCRIPTION -->
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel enim sem, in vulputate augue.</p>
+						<p>{{ item.outline }}</p>
 					</li>
+					{% endfor %}
 					
-					<li data-id="id-2" data-type="flash">
-						<div class="thumb">
-							<a href="http://s3.envato.com/files/1364715/preview.swf" class="fancybox">	
-							<span class="imghover_2c_pfolio"></span>
-							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
-							</a>			
-						</div>
-						<h1 class="main_h1">Flash pellentesque habitant morbi tristique</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor tincidunt.</p>
-					</li>
-					
-					<li data-id="id-3" data-type="video">
-						<div class="thumb">
-							<a href="#pfolio_embed_video_1" class="fancybox_embed">	
-							<span class="imghover_2c_pfolio"></span>
-							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" /></a>			
-						</div>
-						<h1 class="main_h1">Video pellentesque habitant morbi tristique vulputate</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor.</p>
-						<!-- HIDDEN CONTENT FOR EMBED -->
-						<div class="hidden">
-							<div id="pfolio_embed_video_1">
-								<iframe src="http://player.vimeo.com/video/2707661" width="400" height="302" frameborder="0"></iframe>
-							</div>
-						</div>
-					</li>
-					
-					<li data-id="id-4" data-type="photos video">
-						<div class="thumb">
-							<a href="http://homepage.mac.com/woostermike/Sites/videos/avatar.flv" class="fancybox_flv">	
-							<span class="imghover_2c_pfolio"></span>
-							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
-							</a>			
-						</div>
-						<h1 class="main_h1">FLV video pellentesque habitant morbi tristique</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor.</p>
-					</li>
-					
-					<li data-id="id-5" data-type="photos website">
-						<div class="thumb">
-							<a href="http://www.themeprince.com" target="_blank">	
-							<span class="imghover_2c_pfolio"></span>
-							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
-							</a>			
-						</div>
-						<h1 class="main_h1">Link cras vel enim sem in vulputate</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus elit vel dolor tincidunt.</p>
-					</li>
-					
-					<li data-id="id-6" data-type="photos website">
-						<div class="thumb">
-							<a href="/static/index/images/pfolio-1-2c-tn.jpg" class="fancybox">	
-							<span class="imghover_2c_pfolio"></span>
-							<img src="/static/index/images/pfolio-1-2c-tn.jpg" alt="" />
-							</a>			
-						</div>
-						<h1 class="main_h1">Another picture pellentesque</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel enim sem, in vulputate augue.</p>
-					</li>
 				</ul><!-- .portfolio-2c ends -->					
 				
-				
+				<div class="pagination">
+						<span class="step-links">
+							{% if skills.has_previous %}
+								<a href="?page={{ contacts.previous_page_number }}">首页</a>
+							{% endif %}
+		
+							<span class="current">
+								页码 {{ skills.number }} / {{ skills.paginator.num_pages }}.
+							</span>
+							
+							{% if skills.has_next %}
+								<a href="?page={{ skills.next_page_number }}">下一页</a>
+							{% endif %}
+						</span>
+					</div>
 				<div class="hr"></div>
 			
 			

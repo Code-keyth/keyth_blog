@@ -19,8 +19,12 @@ from blog import views
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
     url(r'^$',views.index),
-    url(r'^blog/', views.blog),
-    url(r'^skill/', views.skill),
+    url(r'^blog/$', views.blog),
+    url(r'^reply.php$', views.reply),
+    url(r'^skill/$', views.skill),
+    url(r'^blog/post/$', views.post),
+    url(r'^skill/post/$', views.post),
+    url(r'^pj/',include('Pj.urls')),
     url(r'^admin/',include('Admin.urls'))
     
 ]

@@ -31,7 +31,7 @@ class Users(models.Model):
     username = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     mobile = models.CharField(max_length=15)
-    email = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
     true_name = models.CharField(max_length=20,null=True)
     cookile = models.CharField(max_length=50,default='NULL')
     is_root = models.IntegerField(default=0)
@@ -41,3 +41,13 @@ class Users(models.Model):
 
 class Skill_type(models.Model):
     name = models.CharField(max_length=30)
+
+class Reply(models.Model):
+    username = models.CharField(max_length=30)
+    email = models.EmailField(max_length=30)
+    tid = models.IntegerField()
+    group= models.CharField(max_length=10)
+    fid = models.IntegerField()
+    content=models. TextField()
+    time= models.DateTimeField(default=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) )
+    articleid= models.IntegerField()
